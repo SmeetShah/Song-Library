@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller">
+   <children>
+      <ListView fx:id="songListView" layoutX="60.0" layoutY="49.0" onMouseClicked="#showDetailsOfSelectedItem" prefHeight="200.0" prefWidth="358.0" />
+      <Label layoutX="249.0" layoutY="14.0" text="Song Library" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="269.0" prefHeight="18.0" prefWidth="51.0" text="Name:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="329.0" prefHeight="18.0" prefWidth="51.0" text="Album:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="299.0" prefHeight="18.0" prefWidth="51.0" text="Artist:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="358.0" prefHeight="18.0" prefWidth="51.0" text="Year:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="addSong" layoutX="452.0" layoutY="80.0" mnemonicParsing="false" onAction="#sceneHandlerForAddEdit" prefHeight="26.0" prefWidth="102.0" text="ADD" />
+      <Button fx:id="editSong" layoutX="452.0" layoutY="129.0" mnemonicParsing="false" onAction="#sceneHandlerForAddEdit" prefHeight="26.0" prefWidth="102.0" text="EDIT" />
+      <Button fx:id="deleteSong" layoutX="452.0" layoutY="173.0" mnemonicParsing="false" onAction="#deleteSongFromList" prefHeight="26.0" prefWidth="102.0" text="DELETE" />
+      <TextField fx:id="songNameTextField" editable="false" layoutX="125.0" layoutY="267.0" prefHeight="26.0" prefWidth="190.0" />
+      <TextField fx:id="artistNameTextField" editable="false" layoutX="125.0" layoutY="295.0" prefHeight="26.0" prefWidth="190.0" />
+      <TextField fx:id="albumNameTextField" editable="false" layoutX="125.0" layoutY="326.0" prefHeight="26.0" prefWidth="190.0" />
+      <TextField fx:id="albumYearTextField" editable="false" layoutX="125.0" layoutY="355.0" prefHeight="26.0" prefWidth="190.0" />
+      <Button fx:id="confirmAddButton" layoutX="363.0" layoutY="274.0" mnemonicParsing="false" onAction="#addSongToList" prefHeight="26.0" prefWidth="102.0" text="Confirm" visible="false" />
+      <Button fx:id="cancelAddButton" layoutX="363.0" layoutY="315.0" mnemonicParsing="false" onAction="#addSongToList" prefHeight="26.0" prefWidth="102.0" text="Cancel" visible="false" />
+      <Button fx:id="confirmEditButton" layoutX="363.0" layoutY="274.0" mnemonicParsing="false" onAction="#editSongInList" prefHeight="26.0" prefWidth="102.0" text="Confirm" visible="false" />
+      <Button fx:id="cancelEditButton" layoutX="363.0" layoutY="316.0" mnemonicParsing="false" onAction="#editSongInList" prefHeight="26.0" prefWidth="102.0" text="Cancel" visible="false" />
+   </children>
+</AnchorPane>
